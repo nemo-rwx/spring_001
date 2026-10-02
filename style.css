@@ -52,7 +52,7 @@ button {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    background: #2563eb;
+    background: #212e47;
     color: white;
     font-size: 14px;
 }
@@ -62,7 +62,7 @@ button:hover {
 }
 
 button.delete {
-    background: #dc2626;
+    background: #7e1e1e;
 }
 
 button.softdelete {
