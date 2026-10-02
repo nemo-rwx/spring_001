@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Management System</h1>
+
+    <!-- Student Form -->
+    <div class="card">
+
+        <h2>Student Details</h2>
+
+        <form id="studentForm">
+
+            <input
+                type="number"
+                id="studentId"
+                placeholder="Student ID (for Get/Update/Delete)"
+            >
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Student Name"
+                required
+            >
+
+            <input
+                type="number"
+                id="age"
+                placeholder="Age"
+                required
+            >
+
+            <input
+                type="number"
+                id="rollNo"
+                placeholder="Roll Number"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+            >
+
+            <input
+                type="text"
+                id="subject"
+                placeholder="Subject"
+                required
+            >
+
+        </form>
+
+        <div class="buttons">
+
+            <button onclick="createStudent()">
+                Add Student
+            </button>
+
+            <button onclick="getStudent()">
+                Get Student
+            </button>
+
+            <button onclick="updateStudent()">
+                Update Student
+            </button>
+
+            <button onclick="deleteStudent()" class="delete">
+                Delete Student
+            </button>
+
+            <button onclick="softdelete()" class="softdelete">
+                Soft Delete
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Student Result -->
+    <div class="card">
+
+        <h2>Student Result</h2>
+
+        <pre id="result">No student selected</pre>
+
+    </div>
+
+
+    <!-- All Students Table -->
+    <div class="card">
+
+        <h2>All Students</h2>
+
+        <button onclick="getAllStudents()">
+            Load Students
+        </button>
+
+        <table id="studentTable">
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Roll No</th>
+                    <th>Email</th>
+                    <th>Subject</th>
+                    <th>Soft Delete</th>
+                </tr>
+            </thead>
+
+            <tbody id="studentTableBody">
+                <!-- Students will appear here -->
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
